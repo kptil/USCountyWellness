@@ -1,0 +1,7 @@
+user_id
+timestamp
+review_sentences
+rating
+has_spoiler
+book_id
+review_id
