@@ -11,22 +11,23 @@
         div {
             position: absolute;
             text-align: center;
-            top : 450px;
-            left : 450px;
+            top : 250px;
+            left : 250px;
         }
     </style>
 </head>
 <body class = 'styleClass'>
     <h2>Form Based Query</h2> <br>
+    <form class="forms" method="POST" action="GraphQuery.html" target="iframe">
     <label>
-        <select name = Attribute-1>
+        <select id = 'att1' name = Attribute-1>
             <option value = ''> Attribute 1</option>
             <option value = 'A'> Select A</option>
             <option value = 'B'> Select B</option>
             <option value = 'C'> Select C</option>
             <option value = 'D'> Select D</option>
         </select>
-        <select name = Attribute-2>
+        <select id = 'att2' name = Attribute-2>
             <option value = ''> Attribute 2</option>
             <option value = 'A'> Select A</option>
             <option value = 'B'> Select B</option>
@@ -34,37 +35,52 @@
             <option value = 'D'> Select D</option>
         </select>
         <label>From</label>
-        <select name="year" id="fyear" size = 2>
-        </select>
-        <script>
+        <label for="fYear"></label>
+            <select name="fyear" id="fYear" size = 2>
+
+             <script>
             function dropDown(){
-                document.getElementById("fyear").innerHTML += ("<option>Year</option>");
-                for (y = 1983; y < 2016; y++) {
-                    document.getElementById("fyear").innerHTML += ("<option value =" + y + ">" + y + "</option>");
+                document.getElementById("fYear").innerHTML += ("<option>Year</option>");
+                for (let y = 1983; y < 2016; y++) {
+                    document.getElementById("fYear").innerHTML += ("<option value =" + y + ">" + y + "</option>");
                 }
             }
 
             dropDown();
-        </script>
+
+             </script>
+             </select>
+
+
         <label>To</label>
-        <select name="year" id="tyear" size = 2>
-        </select>
-        <script>
+        <label for="tYear"></label>
+            <select name="tyear" id="tYear" size = 2>
+
+             <script>
             function dropDown(){
-                document.getElementById("tyear").innerHTML += ("<option>Year</option>");
-                for (y = 1983; y < 2016; y++) {
-                    document.getElementById("tyear").innerHTML += ("<option value =" + y + ">" + y + "</option>");
+                document.getElementById("tYear").innerHTML += ("<option>Year</option>");
+                for (let y = 1983; y < 2016; y++) {
+                    document.getElementById("tYear").innerHTML += ("<option value =" + y + ">" + y + "</option>");
                 }
             }
 
             dropDown();
-        </script>
 
+            </script>
+             </select>
     </label> <br> <br>
-  <div>
-      <input type = Submit value = 'Submit'>
-      <a href = HomePage.html><input type = button value = 'Home'></a>
-  </div>
 
+      <input type = Submit value = 'Submit' id = "btn">
+
+      <a href = HomePage.html><input type = button value = 'Home'></a>
+
+
+    </form>
+
+    <div class="embed-container">
+        <iframe name="iframe" width="500" height="300" >
+            <img src="GraphQuery.html"  alt=""/>
+        </iframe>
+    </div>
 </body>
 </html>
