@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<canvas id="myChart"  height=200px width=500px></canvas>
+
+<script>
+
+        let att1 = [6, 5, 6, 7, 8, 6];
+        let att2 = [7, 6, 7, 5, 6, 7];
+        let fYear = 2010;
+        let tYear = 2015;
+        let year = [];
+        for (let i = fYear; i <= tYear; i++) {
+            year.push(i);
+         }
+
+        const setting = {
+            type: "line",
+            data: {
+                labels: year,
+                datasets: [{
+                    label: 'Annual Average Birth Weight (lbs) for Whites',
+                    data: att1,
+                    borderColor: 'red',
+                    borderBackground: 'red',
+                }, {
+                    label: 'Annual Average Birth Weight (lbs) for Non-Whites',
+                    data: att2,
+                    borderColor: "green",
+                    borderBackground: 'green',
+                }]
+            },
+            options: {
+                legend: {display: true}
+
+            }
+        };
+
+        new Chart(
+            document.getElementById('myChart'),
+            setting
+        );
+
+        for (let i = fYear; i <= tYear; i++) {
+            year.pop();
+        }
+
+</script>
+</body>
+</html>
