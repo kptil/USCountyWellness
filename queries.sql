@@ -80,7 +80,7 @@ select year, count(bID)
 from Birth natural join Receives_Prenatal_Care
 where careAdequacy
 
--- Query 5: For every year, how many mothers had every risk factor and still had successful pregnancies?
+-- Query 5: For every year, how many mothers had every risk factor and still had successful pregnancies in state?
 -- BIRTH METRICS
 -- Question is good, just needs implemented
 
