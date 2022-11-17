@@ -8,8 +8,22 @@
 </head>
 <body>
 <canvas id="myChart"  height=200px width=500px></canvas>
-
+<u1>
+</u1>
 <script>
+        const url = 'http://localhost:3000/api/counties';
+        let data;
+        fetch(url).then(res => {
+            return res.json();
+        }).then(output => {
+            output.forEach(county => {
+                const cName = county.AREA_NAME;
+                data = `<li>${cName}</li>`;
+                document.querySelector('u1').insertAdjacentHTML('beforeend', data);
+            });
+        }).catch(err => {
+            console.log(err);
+        });
 
         let att1 = [6, 5, 6, 7, 8, 6];
         let att2 = [7, 6, 7, 5, 6, 7];
@@ -52,5 +66,6 @@
         }
 
 </script>
+
 </body>
 </html>
