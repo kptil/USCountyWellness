@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72dd9072-9b96-4ca1-908a-ea36dbf2873a" name="Changes" comment="adjusting FE structure">
-      <change beforePath="$PROJECT_DIR$/queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/queries.sql" afterDir="false" />
+    <list default="true" id="72dd9072-9b96-4ca1-908a-ea36dbf2873a" name="Changes" comment="queries finished!">
+      <change beforePath="$PROJECT_DIR$/Updated-UI-HTML/AvgPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Updated-UI-HTML/HomePage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Updated-UI-HTML/IntQuery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Updated-UI-HTML/MainPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Updated-UI-HTML/MapIntPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Updated-UI-HTML/Query1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Updated-UI-HTML/Query2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Updated-UI-HTML/Query3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Updated-UI-HTML/Query4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Updated-UI-HTML/Query5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Updated-UI-HTML/Query6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Updated-UI-HTML/Styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface-HTML/AvgPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterface-HTML/AvgPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface-HTML/HomePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterface-HTML/HomePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface-HTML/MainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterface-HTML/MainPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface-HTML/MapHeatPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface-HTML/MapIntPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterface-HTML/MapIntPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface-HTML/RankPage.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668629501362</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="queries finished!">
+      <created>1668809372414</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668809372414</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +111,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="query update" />
     <MESSAGE value="adjusting FE structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjusting FE structure" />
+    <MESSAGE value="queries finished!" />
+    <option name="LAST_COMMIT_MESSAGE" value="queries finished!" />
   </component>
 </project>
