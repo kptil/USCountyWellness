@@ -90,7 +90,31 @@ group by DOB_Y;
 -- BIRTH METRICS
 -- Question is good, just needs implemented
 
-
+with motherRiskState(year, mID, risk_factor) as (
+    select DOB_Y, mID, risk_factor
+    from (
+            (select DOB_Y, mID
+            from Mother natural join Birth natural join County
+            where state_name = 'Florida')
+            natural join
+            MotherHasRiskFactor
+         )
+)
+select year, count(mID) as numMothers
+from (
+    ( select * from motherRiskState )
+    minus
+    (
+        select year, mID, risk_factor
+        from (
+                (select * from (select year, mID from motherRiskState),
+                               (select risk_factor from MotherHasRiskFactor))
+                minus
+                (select * from motherRiskState)
+             )
+    )
+    )
+group by year;
 
 
 
