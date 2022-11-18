@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heat & Interactive Maps</title>
+    <link rel = 'Stylesheet' href = 'Styles.css' type = text/css>
+    <style>
+        {
+            padding-inline: 50px;
+        }
+        div {
+            position: absolute;
+            text-align: center;
+            top : 450px;
+            left : 450px;
+        }
+    </style>
+</head>
+<body class = 'styleClass'>
+<h2>Heat & Interactive Maps</h2> <br>
+<label>
+    <select name = Attribute-1>
+        <option value = ''> Attribute 1</option>
+        <option value = 'A'> Select A</option>
+        <option value = 'B'> Select B</option>
+        <option value = 'C'> Select C</option>
+        <option value = 'D'> Select D</option>
+    </select>
+    <select name = Attribute-2>
+        <option value = ''> Attribute 2</option>
+        <option value = 'A'> Select A</option>
+        <option value = 'B'> Select B</option>
+        <option value = 'C'> Select C</option>
+        <option value = 'D'> Select D</option>
+    </select>
+    <label>From</label>
+    <label for="fYear"></label><select name="year" id="fYear" size = 2>
+    </select>
+    <script>
+        function dropDown(){
+            document.getElementById("fYear").innerHTML += ("<option>Year</option>");
+            for (let y = 1983; y < 2016; y++) {
+                document.getElementById("fYear").innerHTML += ("<option value =" + y + ">" + y + "</option>");
+            }
+        }
+
+        dropDown();
+    </script>
+    <label>To</label>
+    <label for="tYear"></label><select name="year" id="tYear" size = 2>
+    </select>
+    <script>
+        function dropDown(){
+            document.getElementById("tYear").innerHTML += ("<option>Year</option>");
+            for (let y = 1983; y < 2016; y++) {
+                document.getElementById("tYear").innerHTML += ("<option value =" + y + ">" + y + "</option>");
+            }
+        }
+
+        dropDown();
+    </script>
+
+</label> <br> <br>
+<div>
+    <input type = Submit value = 'Submit'>
+    <a href = HomePage.html><input type = button value = 'Home'></a>
+</div>
+
+</body>
+</html>
