@@ -114,6 +114,7 @@ from (
              )
     )
     )
+where year >= 2000 and year <= 2005
 group by year;
 
 
