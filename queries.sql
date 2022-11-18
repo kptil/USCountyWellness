@@ -26,6 +26,7 @@ select year, avg(Cigarettes_Smoked) as avgCigarettes from
     join
     (select mID, cigarettes_smoked from Mother)
     using (mID)
+where (year >= 2000 and year <= 2005)
 group by year;
 
 
@@ -42,17 +43,11 @@ from (
                 natural join countyhasemployment
             )
         group by state_name, county_em_year
-    );
+    )
+where (county_em_year >= 2000 and county_em_year <= 2005);
 
+-- Query 3: How has the annual fetal death rate changed year by year for children of a given race?
 
--- Query 3: How has the annual fetal death rate changed year by year for children of a given race? Does the annual
--- fetal death rate increase with percent of people uninsured regardless of race?
--- QUESTION SENT - BIRTH METRICS. This would be visualized as two separate graphs. The second one would have percent
--- people uninsured on the x axis, annual fetal death rate on the y-axis, and a different line for each year. It
--- would be great to show them side by side with an explanatory paragraph above them.
--- ANSWER: Probably just going to stick with Part 1
-
--- Part 1
 select DOB_Y, fetalDeaths / totalBirths as fetalDeathRate
 from (
     (select DOB_Y, count(bID) as totalBirths
@@ -66,19 +61,30 @@ natural join
          natural join
          (select mID from Mother where race = 'white')
     group by DOB_Y)
-);
+)
+where (DOB_Y >= 2000 and DOB_Y <= 2005);
 
--- Part 2: Question sent about whether extra non-time based can be included.
 
+-- Query 4: For each year, how many births received adequate prenatal care in states where minorities made up
+-- xx% of the population? Minority in this case is defined as not white.
 
--- Query 4: For each year, how many births received excellent prenatal care in states with large minority populations. 
--- large default: > 50 percent of total pop
--- BIRTH METRICS
--- Question is good, just needs implemented
-
-select year, count(bID)
-from Birth natural join Receives_Prenatal_Care
-where careAdequacy
+with statepops(race_pop_year, state_name, pop) as (
+    select county_pop_year, state_name, sum(county_total)
+    from CountyHasPop natural join US_State
+    group by county_pop_year, state_name
+)
+select DOB_Y, count(bID) as numBirths
+from (
+        select bID, DOB_Y from (Birth natural join (select coID, state_name from County))
+        where state_name in (   select state_name
+                                from statepops join StateHasPopByRace
+                                using (state_name, race_pop_year)
+                                where DOB_Y = race_pop_year and (race_count / pop > .5)
+                            )
+      )
+      natural join Receives_Prenatal_Care
+where (care_adequacy = 'adequate') and (DOB_Y >= 2000 and DOB_Y <= 2005)
+group by DOB_Y;
 
 -- Query 5: For every year, how many mothers had every risk factor and still had successful pregnancies in state?
 -- BIRTH METRICS
