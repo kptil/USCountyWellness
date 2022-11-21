@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72dd9072-9b96-4ca1-908a-ea36dbf2873a" name="Changes" comment="wkspce" />
+    <list default="true" id="72dd9072-9b96-4ca1-908a-ea36dbf2873a" name="Changes" comment="wkspce">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface-HTML/services/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterface-HTML/services/database.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
