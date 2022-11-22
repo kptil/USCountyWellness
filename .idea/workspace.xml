@@ -4,14 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72dd9072-9b96-4ca1-908a-ea36dbf2873a" name="Changes" comment="windows files">
+    <list default="true" id="72dd9072-9b96-4ca1-908a-ea36dbf2873a" name="Changes" comment="test db routes">
+      <change afterPath="$PROJECT_DIR$/UserInterface-HTML/controllers/query2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface-HTML/db_apis/query2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface-HTML/Query2.html" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterface-HTML/Query2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface-HTML/services/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterface-HTML/services/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserInterface-HTML/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterface-HTML/table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/queries.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,6 +65,7 @@
       <workItem from="1668615353887" duration="5597000" />
       <workItem from="1668688333927" duration="1315000" />
       <workItem from="1668788673997" duration="4334000" />
+      <workItem from="1669068992986" duration="7372000" />
     </task>
     <task id="LOCAL-00001" summary="query update">
       <created>1668535096715</created>
@@ -96,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668991561819</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="test db routes">
+      <created>1668999509043</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668999509043</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +140,7 @@
     <MESSAGE value="new front end" />
     <MESSAGE value="wkspce" />
     <MESSAGE value="windows files" />
-    <option name="LAST_COMMIT_MESSAGE" value="windows files" />
+    <MESSAGE value="test db routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="test db routes" />
   </component>
 </project>

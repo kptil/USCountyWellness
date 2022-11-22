@@ -85,6 +85,21 @@
 
 </script>
 <br>
+<u1></u1>
+<script>
+    const url = 'http://localhost:3000/api/query2';
+    let data;
+    fetch(url).then(res => { return res.json(); }).then(output => {
+        output.forEach(row => {
+            const state = row.STATE_NAME;
+            data = `<li>${state}</li>`;
+            document.querySelector('u1').insertAdjacentHTML('beforeend', data);
+        });
+    }).catch(err => {
+        console.log(err);
+    });
+</script>
+<br>
 <a href = IntQuery.html><input type = button value = 'Home'></a>
 
 </body>

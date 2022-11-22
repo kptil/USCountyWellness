@@ -9,11 +9,11 @@ const _mother = 'WEISSB.MOTHER';
 const _hasRisk = 'WEISSB.MOTHERHASRISKFACTOR';
 const _motherRisk = 'WEISSB.MOTHER RISK';
 // created test tables to avoid key constraints on actual tables when entering dummy data
-const _county = 'KTILEY.COUNTYTEST';
-const _countHasEmployment = 'KTILEY.COUNTYHASEMPLOYMENTTEST'
+const _countyTest = 'KTILEY.COUNTYTEST';
+const _countyHasEmploymentTest = 'KTILEY.COUNTYHASEMPLOYMENTTEST'
 
 // TODO:
-// Adjust query 2 to incorporate at least state
+// DONE Adjust query 2 to incorporate at least state
 // Copy db_apis\counties.js to run query 2
 // Get results to show up under graph on Query 2 page
 
@@ -23,6 +23,8 @@ module.exports = {
         population : _population,
         mother : _mother,
         hasRisk : _hasRisk,
-        motherRisk : _motherRisk
+        motherRisk : _motherRisk,
+        countyTest : _countyTest,
+        countyHasEmploymentTest : _countyHasEmploymentTest
     }
 }
