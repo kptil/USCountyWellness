@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Averages-Information</title>
+    <title>Rankings & Averages</title>
     <link rel = 'Stylesheet' href = 'Styles.css' type = text/css>
     <style>
         {
@@ -34,12 +34,12 @@
         <option value = 'D'> Select D</option>
     </select>
     <label>From</label>
-    <select name="year" id="fyear" size = 2>
+    <label for="fyear"></label><select name="year" id="fyear" size = 2>
     </select>
     <script>
         function dropDown(){
             document.getElementById("fyear").innerHTML += ("<option>Year</option>");
-            for (y = 1983; y < 2016; y++) {
+            for (let y = 1983; y < 2016; y++) {
                 document.getElementById("fyear").innerHTML += ("<option value =" + y + ">" + y + "</option>");
             }
         }
@@ -47,12 +47,12 @@
         dropDown();
     </script>
     <label>To</label>
-    <select name="year" id="tyear" size = 2>
+    <label for="tyear"></label><select name="year" id="tyear" size = 2>
     </select>
     <script>
         function dropDown(){
             document.getElementById("tyear").innerHTML += ("<option>Year</option>");
-            for (y = 1983; y < 2016; y++) {
+            for (let y = 1983; y < 2016; y++) {
                 document.getElementById("tyear").innerHTML += ("<option value =" + y + ">" + y + "</option>");
             }
         }

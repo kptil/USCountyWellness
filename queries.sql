@@ -39,10 +39,11 @@ select state_name, county_em_year, num / denom as rate
 from (
         select state_name, county_em_year, sum(labor_force) as denom, sum(unemployed) as num
         from (
-                (select coid, state_name from county)
+                (select coid, state_name from county where state_name = 'Florida')
                 natural join countyhasemployment
             )
         group by state_name, county_em_year
+        where state_name = 'Florida'
     )
 where (county_em_year >= 2000 and county_em_year <= 2005);
 

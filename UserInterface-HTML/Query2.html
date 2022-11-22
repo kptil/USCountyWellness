@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Query 2</title>
+    <link rel = 'Stylesheet' href = 'Styles.css' type = text/css>
+    <style>
+        {
+            padding-inline: 50px;
+        }
+        div {
+            position: absolute;
+            text-align: center;
+            top : 250px;
+            left : 250px;
+        }
+    </style>
+</head>
+<body class = 'styleClass'>
+<h2>Query 2</h2> <br>
+<h3>Baseline State & County Statistics</h3><br><br>
+<form id="forms" >
+    <label>
+        <label for='unemployment'>Input Unemployment Rate </label>
+        <input type = Number min="0" max="100" id = 'unemployment'> <br><br><br>
+        <label for='state'>Select State </label>
+        <select id = 'state' name = "State">
+            <option value = 'Florida'> Florida</option>
+            <option value = 'Other States'> Other States</option>
+        </select> <br><br><br>
+
+        <label>From</label>
+        <label for="fYear"></label>
+        <select name="fyear" id="fYear" >
+
+            <script>
+                function dropDown(){
+                    document.getElementById("fYear").innerHTML += ("<option>Year</option>");
+                    for (let y = 2000; y <= 2005; y++) {
+                        document.getElementById("fYear").innerHTML += ("<option value =" + y + ">" + y + "</option>");
+                    }
+                }
+
+                dropDown();
+
+            </script>
+        </select>
+
+
+        <label>To</label>
+        <label for="tYear"></label>
+        <select name="tyear" id="tYear" >
+
+            <script>
+                function dropDown(){
+                    document.getElementById("tYear").innerHTML += ("<option>Year</option>");
+                    for (let y = 2000; y <= 2005; y++) {
+                        document.getElementById("tYear").innerHTML += ("<option value =" + y + ">" + y + "</option>");
+                    }
+                }
+
+                dropDown();
+
+            </script>
+        </select>
+    </label> <br> <br>
+    <br>
+    <input type = Submit value = 'Submit' id = "btn">
+
+</form>
+
+<script>
+    const qform = document.getElementById("forms");
+    qform.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let unemployment = document.getElementById('unemployment').value;
+        let state = document.querySelector('#state').value;
+        let fromYear = document.querySelector('#fYear').value;
+        let toYear = document.querySelector('#tYear').value;
+
+        console.log(unemployment + state + fromYear + toYear);
+
+    })
+</script>
+<br>
+<u1></u1>
+<script>
+    const url = 'http://localhost:3000/api/query2';
+    let data;
+    fetch(url).then(res => { return res.json(); }).then(output => {
+        output.forEach(row => {
+            const state = row.STATE_NAME;
+            const year = row.COUNTY_EM_YEAR; // Note: These must be in all caps
+            const rate = row.RATE;
+            data = `<li>${state}, ${year}, ${rate}</li>`;
+            document.querySelector('u1').insertAdjacentHTML('beforeend', data);
+        });
+    }).catch(err => {
+        console.log(err);
+    });
+</script>
+<br>
+<a href = IntQuery.html><input type = button value = 'Home'></a>
+
+</body>
+</html>
