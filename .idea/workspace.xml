@@ -4,22 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72dd9072-9b96-4ca1-908a-ea36dbf2873a" name="Changes" comment="new db routes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserInterface-HTML/Query2.html" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterface-HTML/Query2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserInterface-HTML/db_apis/query2.js" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterface-HTML/db_apis/query2.js" afterDir="false" />
+    <list default="true" id="72dd9072-9b96-4ca1-908a-ea36dbf2873a" name="Changes" comment="adjusting FE structure">
+      <change beforePath="$PROJECT_DIR$/queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/queries.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,8 +52,6 @@
       <workItem from="1668615353887" duration="5597000" />
       <workItem from="1668688333927" duration="1315000" />
       <workItem from="1668788673997" duration="4334000" />
-      <workItem from="1669068992986" duration="7595000" />
-      <workItem from="1669116623867" duration="1957000" />
     </task>
     <task id="LOCAL-00001" summary="query update">
       <created>1668535096715</created>
@@ -120,7 +109,7 @@
       <option name="project" value="LOCAL" />
       <updated>1669080961638</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +135,6 @@
     <MESSAGE value="windows files" />
     <MESSAGE value="test db routes" />
     <MESSAGE value="new db routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="new db routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjusting FE structure" />
   </component>
 </project>
